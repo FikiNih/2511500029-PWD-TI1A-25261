@@ -5,4 +5,3 @@ Kelompok TI1A<br>
 Tahun Ajaran 2025/2026
 Semester Gasal<br><br>
 ![LOGO ISBAL](logoisbal.png)
-
