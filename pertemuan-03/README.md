@@ -9,4 +9,5 @@ Hari ini, Rabu 08 Oktober 2025, saya belajar:
     <li>Styling #about</li>
     <li>Update style</li>
     <li>Add coloring</li>
+    <li>add color and element strongg</li>
 </ol>    
