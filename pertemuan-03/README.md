@@ -7,5 +7,6 @@ Hari ini, Rabu 08 Oktober 2025, saya belajar:
 <ol>
     <li>menggunakan file emmet.html pertemuan-02 untuk file index.html pertemuan-03</li>
     <li>Styling #about</li>
-    <li>menambahkan coloring pada h2</li>
+    <li>Update style</li>
+    <li>Add coloring</li>
 </ol>    
