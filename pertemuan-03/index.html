@@ -101,6 +101,12 @@
         display: grid;
         justify-content: left;
     }
+
+    #Contact .Submit {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
     </style>
 </head>
 <body>
@@ -143,8 +149,8 @@
         <label for="txtEmail" class="Email">Email:</label>
         <input type="email" id="txtEmail" name="txtEmail" class="Email" placeholder="Masukan email" required autocomplete="email">
 
-        <label for="submit">Kirim</label>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
+        <label for="submit" class="Submit">Kirim</label>
+        <textarea id="txtPesan" name="txtPesan" class="Submit" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
 
         <button type="submit" class="btn">Kirim</button>
         <button type="reset" class="reset">Batal</button>
