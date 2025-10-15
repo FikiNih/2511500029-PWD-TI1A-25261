@@ -40,15 +40,46 @@
             flex-shrink: 0;
         }
 
-       #about, 
-#contact { 
-  background-color: #ffffff; 
-  border-radius: 10px; 
-  padding: 20px; 
-  max-width: 700px; 
-  margin: 20px auto; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-} 
+        #Contact h2{
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #Contact {
+            background-color: #1c77e7;
+            border-radius: 10px;
+            padding: 20px;
+            justify-content: flex-start;
+            align-items: baseline; 
+            flex-shrink: 0;
+            max-width: 700px;
+            margin: 20px auto;
+            border: 5px inset #174985;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #Contact label{
+            color: #77abea;
+        }
+
+        .Contact .btn {
+            color: #5ef95e;
+        }
+
+        #Contact .btn {
+            background-color: #27c427;
+        }
+
+        #Contact .reset{
+           color: #e85050; 
+        }
+
+        #Contact .reset{
+            background-color: #fb6565;
+        }
 
         @media (max-width:600px) {
             #About p {
@@ -62,6 +93,63 @@
             margin-bottom: 2px;
         }
     }
+
+     @media (max-width:600px) {
+            #Contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        #Contact {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 2px;
+        }
+    } 
+
+    #Contact label {
+        display: flex;
+    }
+
+
+    #Contact button{
+        display: flex ;
+    }
+
+    #Contact label {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 1em;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact label:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    }
+
+    #Contact label {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 1em;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact label:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    } 
+
 
 #contact label>span { 
   min-width: 180px; 
@@ -82,14 +170,6 @@
   flex-shrink: 0; 
 } 
 
-#about p { 
-  display: flex; 
-  justify-content: flex-start; 
-  align-items: baseline; 
-  margin: 0; 
-  padding: 6px 0; 
-  border-bottom: 1px solid #e6e6e6; 
-} 
     </style> 
 </head>
 <body>
@@ -126,14 +206,14 @@
     <h2>Kontak Saya</h2>
     <form action="" method="get">
 
-        <label for="txtNama">Nama:</label>
+        <label for="txtNama" span>Nama:</label>
         <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
         
-        <label for="txtEmail" class="email">Email:</label>
+        <label for="txtEmail" span>Email:</label>
         <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
 
-        <label for="submit" class="Submit">Kirim</label>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
+        <label for="submit" span>Kirim</label>
+        <textarea id="txtPesan" name="txtPesan" class="submit" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
