@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul halaman</title>
+    <style>
+        #About {
+            background-color: #a1befc;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #About h2{
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #About p{
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin: 0;
+            padding: 6px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        #About strong{
+            min-width: 180px;
+            color: #003366;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 16px;
+            flex-shrink: 0;
+        }
+
+        #Contact h2{
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #Contact {
+            background-color: #1c77e7;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 40px auto;
+            border: 5px inset #174985;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #Contact label{
+            color: #77abea;
+        }
+
+        .Contact .btn {
+            color: #5ef95e;
+        }
+
+        #Contact .btn {
+            background-color: #27c427;
+        }
+
+        #Contact .reset{
+           color: #e85050; 
+        }
+
+        #Contact .reset{
+            background-color: #fb6565;
+        }
+
+        @media (max-width:600px) {
+            #About p {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        #About strong {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 2px;
+        }
+    }
+
+    #Contact .Nama {
+        display: flex;
+        flex-direction: column
+
+    }
+
+    #Contact .email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Contact .oke {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Contact .Submit {
+        display: flex;
+    }
+
+    #Contact .btn {
+        display: flex ;
+    }
+
+#about strong, 
+#contact label>span { 
+  min-width: 180px; 
+  color: #003366; 
+  font-weight: 600; 
+  text-align: right; 
+  padding-right: 16px; 
+  flex-shrink: 0; 
+} 
+
+    </style> 
+</head>
+<body>
+    <header>
+        <h1>Tentang Saya</h1>
+        <nav>
+            <ul style="list-style-type: square;">
+                <li><a href="#Home">Beranda</a></li>
+                <li><a href="#About">Tentang</a></li>
+                <li><a href="#Contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main></main>
+    <footer>
+        <section id="Home">
+        <h2>Selamat Datang</h2>
+        <p>Saya Suka Ayam Geprek</p>
+    </section>
+    <section id="About">
+         <h2>Tentang saya</h2> 
+         <p><strong>NIM:</strong> 2511500029</p>
+         <p><strong>Nama Lengkap:</strong> Fiki &#128526;</p>
+         <p><strong>Tempat Lahir:</strong> Muntok</p>
+         <p><strong>Tanggal Lahir:</strong> 10 September 2007</p>
+         <p><strong>Hobi:</strong>Menulis dan Membaca &#127926;</p>
+         <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+         <p><strong>Pekerjaaan:</strong> Mahasiswa</p>
+         <p><strong>Nama Orang Tua:</strong>Pak David dan Ibu Yayudamayanti</p>
+         <p><strong>Nama Kakak:</strong> Yujos</p>
+         <p><strong>Nama Adek:</strong> Tidak ada</p> 
+    </section>
+    <section id="Contact">
+    <h2>Kontak Saya</h2>
+    <form action="" method="get">
+
+        <label for="txtNama" class="Nama">Nama:</label>
+        <input type="text" id="txtNama" name="txtNama" class="nama" placeholder="Masukan nama" required autocomplete="name">
+        
+        <label for="txtEmail" class="email">Email:</label>
+        <input type="email" id="txtEmail" name="txtEmail" class="oke" placeholder="Masukan email" required autocomplete="email">
+
+        <label for="submit" class="Submit">Kirim</label>
+        <textarea id="txtPesan" name="txtPesan" class="submit" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
+
+        <button type="submit" class="btn">Kirim</button>
+        <button type="reset" class="reset">Batal</button>
+    </form>
+    </section>
+    </footer>
+    <p>&copy; 2025 Fiki [2511500029]</p>
+</body>
+</html>
