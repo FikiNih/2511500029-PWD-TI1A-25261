@@ -140,12 +140,25 @@
         }
     }
 
+    @media (max-width:600px) {
+            #Contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        #Contact {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 2px;
+        }
+    }
+
 
     #Contact .nama {
         border: none;
         outline: none;
         border-radius: 2px;
-        padding: 2px;
+        padding: 2px, 0;
         background-color: #ccc;
         box-shadow: inset 2px 5px
         10px rgba(0, 0, 0, 0.3);
@@ -162,7 +175,7 @@
         border: none;
         outline: none;
         border-radius: 2px;
-        padding: 2px;
+        padding: 2px, 0;
         background-color: #ccc;
         box-shadow: inset 2px 5px
         10px rgba(0, 0, 0, 0.3);
