@@ -211,3 +211,37 @@ header li a {
         margin-bottom: 2px;
     }
 }
+
+@media (max-width: 600px) {
+    /* Paragraf About dan Label Contact jadi kolom */
+    #About p,
+    #Contact label {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 12px; /* beri jarak antar paragraf/label */
+        padding: 0; /* hilangkan padding bawah supaya tidak dobel */
+    }
+
+    /* Label/strong di About dan label > span di Contact */
+    #About strong,
+    #Contact label > span {
+        min-width: auto; /* supaya tidak kaku */
+        width: 100%; /* full lebar */
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 6px; /* beri jarak bawah */
+    }
+
+    /* Input dan textarea agar full width */
+    #Contact input,
+    #Contact textarea {
+        width: 100%;
+    }
+
+    /* Tambahkan spacing antar elemen dalam form */
+    #Contact input,
+    #Contact textarea,
+    #Contact button {
+        margin-bottom: 12px;
+    }
+}
