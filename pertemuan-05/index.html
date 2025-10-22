@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judul halaman</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         #About {
             background-color: #a1befc;
@@ -205,6 +206,15 @@
         padding-right: 16px; 
         flex-shrink: 0; 
     } 
+
+    @media (max-width:600px) {
+        .menu-toggle {
+            display: block;
+            position: absolute;
+            left: 16px;
+            top: 8px;
+        }
+    }
 
     </style> 
 </head>
