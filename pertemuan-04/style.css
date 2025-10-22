@@ -127,7 +127,7 @@
             background-color: #fb6565;
         }
 
-        @media (max-width:700px) {
+        @media (max-width:600px) {
             #About p {
                 flex-direction: column;
                 align-items: flex-start;
@@ -140,7 +140,7 @@
         }
     }
 
-    @media (max-width:700px) {
+    @media (max-width:600px) {
             #Contact {
                 flex-direction: column;
                 align-items: flex-start;
@@ -151,17 +151,66 @@
             padding-right: 0;
             margin-bottom: 2px;
         }
-        #about p,
-        #contact label {
+        #About p,
+        #Contact label {
             flex-direction: column;
             align-items: flex-start;
         }
-        #about strong,
-        #contact label>span {
+        #About strong,
+        #Contact label>span {
             text-align: left;
             padding-right: 0;
             margin-bottom: 2px;
         }
+    }
+
+    #Contact .nama {
+        border: none;
+        border-radius: 2px;
+        padding: 2px, 0;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .nama:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    }
+
+    #Contact .oke {
+        border: none;
+        border-radius: 2px;
+        padding: 2px, 0;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .oke:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    } 
+
+    #Contact .submit {
+        order: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 1em;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .submit:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
     }
 
     #Contact label {
