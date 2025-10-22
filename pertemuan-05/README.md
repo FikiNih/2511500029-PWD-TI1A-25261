@@ -9,4 +9,5 @@ Hari ini, Rabu 22 oktober 2025, saya mempelajari:
     <li>menambahkan hamburger</li>
     <li>layout baru</li>
     <li>menambahkan java script</li>
+    <li>tombol hamburger</li>
 </ol>
