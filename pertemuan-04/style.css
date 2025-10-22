@@ -1,0 +1,200 @@
+         #About {
+            background-color: #a1befc;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #About h2{
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #About p{
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            margin: 0;
+            padding: 6px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        #About strong{
+            min-width: 180px;
+            color: #003366;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 16px;
+            flex-shrink: 0;
+        }
+
+        #Contact h2{
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        #Contact {
+            background-color: #1c77e7;
+            border-radius: 10px;
+            padding: 20px;
+            justify-content: flex-start;
+            align-items: baseline; 
+            flex-shrink: 0;
+            max-width: 700px;
+            margin: 20px auto;
+            border: 5px inset #174985;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #Contact label{
+            color: #77abea;
+        }
+
+        .Contact .btn {
+            color: #5ef95e;
+        }
+
+        #Contact .btn {
+            background-color: #27c427;
+        }
+
+        #Contact .reset{
+           color: #e85050; 
+        }
+
+        #Contact .reset{
+            background-color: #fb6565;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width:600px) {
+            #About p {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        #About strong {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 2px;
+        }
+    }
+
+     @media (max-width:600px) {
+            #Contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        #Contact {
+            text-align: left;
+            padding-right: 0;
+            margin-bottom: 2px;
+        }
+    }
+
+
+    #Contact .nama {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 6px;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .nama:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    }
+
+    #Contact .oke {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 6px;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .oke:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    } 
+
+    #Contact .submit {
+        order: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 1em;
+        background-color: #ccc;
+        box-shadow: inset 2px 5px
+        10px rgba(0, 0, 0, 0.3);
+        transition: 300ms ease-in-out;
+    }
+
+    #Contact .submit:focus {
+        background-color: white;
+        transform: scale(1.05);
+        box-shadow: 10px 10px 50px #969696, -10px -10px 50px #ffffff;
+    }
+
+    #Contact label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 6px 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #About p,
+    #Contact label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin: 0;
+        padding: 6px 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    #Contact label>span { 
+        min-width: 180px; 
+        color: #003366; 
+        font-weight: 600; 
+        text-align: right; 
+        padding-right: 16px; 
+        flex-shrink: 0; 
+    } 
+
+    #About strong, 
+    #Contact label>span { 
+        min-width: 180px; 
+        color: #003366; 
+        font-weight: 600; 
+        text-align: right; 
+        padding-right: 16px; 
+        flex-shrink: 0; 
+    } 
