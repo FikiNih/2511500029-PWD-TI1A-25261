@@ -47,8 +47,8 @@
             color: #003366;
             border-bottom: 2px solid #003366;
             padding-bottom: 6px;
-        margin-top: 0;
-        margin-bottom: 16px;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
 
          #About {
@@ -124,17 +124,6 @@
             }
 
         #Contact {
-            text-align: left;
-            padding-right: 0;
-            margin-bottom: 2px;
-        }
-        #About p,
-        #Contact label {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        #About strong,
-        #Contact label>span {
             text-align: left;
             padding-right: 0;
             margin-bottom: 2px;
