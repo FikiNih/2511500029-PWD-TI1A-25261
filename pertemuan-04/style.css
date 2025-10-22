@@ -225,7 +225,7 @@
     }
 
     #Contact label>span { 
-        min-width: 50px; 
+        min-width: 180px; 
         color: #003366; 
         font-weight: 600; 
         text-align: right; 
@@ -235,7 +235,7 @@
 
     #About strong, 
     #Contact label>span {  
-        min-width: 50px;
+        min-width: 180px;
         color: #003366; 
         font-weight: 600; 
         text-align: right; 
