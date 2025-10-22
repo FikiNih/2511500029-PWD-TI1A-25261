@@ -140,19 +140,6 @@
         }
     }
 
-     @media (max-width:600px) {
-            #Contact {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-        #Contact {
-            text-align: left;
-            padding-right: 0;
-            margin-bottom: 2px;
-        }
-    }
-
 
     #Contact .nama {
         border: none;
