@@ -41,8 +41,8 @@
             margin: 20px auto;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     } 
-    #Home,
-    #About,
+    #Home
+    #About
     #Contact {
         color: #003366;
         border-bottom: 2px solid #003366;
@@ -156,7 +156,6 @@
 
     #Contact .nama {
         border: none;
-        outline: none;
         border-radius: 2px;
         padding: 2px, 0;
         background-color: #ccc;
@@ -173,7 +172,6 @@
 
     #Contact .oke {
         border: none;
-        outline: none;
         border-radius: 2px;
         padding: 2px, 0;
         background-color: #ccc;
