@@ -8,4 +8,5 @@ Hari ini, Rabu 22 oktober 2025, saya mempelajari:
     <li>copy index.html dan style.css folder pertemuan</li>
     <li>menambahkan hamburger</li>
     <li>layout baru</li>
+    <li>menambahkan java script</li>
 </ol>
