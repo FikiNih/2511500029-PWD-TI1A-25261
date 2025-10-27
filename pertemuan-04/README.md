@@ -9,4 +9,5 @@ Hari ini, Rabu 22 oktober 2025, saya belajar:
     <li>mengganti eksternal css</li>
     <li>menambahkan footer</li>
     <li>transisi header</li>
+    <li>menambahkan flex column pada header</li>
 <ol>    
