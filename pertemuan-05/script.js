@@ -8,6 +8,11 @@ this.textContent = "\u2630";
 }
 });
 
+document.getElementById("txtPesan").addEventListener("input", function () {
+const panjang = this.value.length;
+document.getElementById("charCount").textContent = panjang + "/200 karakter";
+});
+
 document.addEventListener("DOMContentLoaded", function () {
 const homeSection = document.getElementById("home");
 const ucapan = document.createElement("p");
