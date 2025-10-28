@@ -128,14 +128,11 @@ margin-bottom: 16px;
 }
 
 #Contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #1c77e7;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 700px;
-    margin: 20px auto;
+background-color: #1c77e7;
+border-radius: 10px;
+padding: 20px;
+max-width: 700px;
+margin: 20px auto;
 border: 5px inset #174985;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -233,18 +230,9 @@ background-color: #cccccc;
 transform: translateY(-1px);
 }
 
-#About h2,
-#Contact h2 {
-color: #003366;
-border-bottom: 2px solid #003366;
-padding-bottom: 6px;
-margin-top: 0;
-margin-bottom: 16px;
-}
-
 #About p,
 #Contact label {
-flex-direction: flex;
+flex-direction: column;
 align-items: flex-start;
 }
 
@@ -255,8 +243,6 @@ padding-right: 0;
 margin-bottom: 2px;
 }
 
-#Contact input,
-#Contact textarea,
 #Contact button {
 width: 100%;
 }
@@ -298,25 +284,4 @@ backdrop-filter: saturate(120%);
     color: #fff;
     font-size: 28px;
     cursor: pointer;
-}
-
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 16px;
-        top: 8px;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        background: #003366;
-        width: 100%;
-        padding: 5px 0;
-    }
-
-    nav.active {
-        display: flex;
-    }
 }
