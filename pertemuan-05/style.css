@@ -231,7 +231,7 @@ transform: translateY(-1px);
 
 #About p,
 #Contact label {
-flex-direction: column;
+flex-direction: flex;
 align-items: flex-start;
 }
 
