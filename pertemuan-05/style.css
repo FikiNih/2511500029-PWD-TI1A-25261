@@ -103,6 +103,7 @@ margin-bottom: 16px;
 
 #About p{
 display: flex;
+justify-content: flex-start;
 align-items: baseline;
 margin: 0;
 padding: 6px 0;
