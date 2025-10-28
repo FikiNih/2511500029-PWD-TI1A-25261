@@ -233,6 +233,15 @@ background-color: #cccccc;
 transform: translateY(-1px);
 }
 
+#About h2,
+#Contact h2 {
+color: #003366;
+border-bottom: 2px solid #003366;
+padding-bottom: 6px;
+margin-top: 0;
+margin-bottom: 16px;
+}
+
 #About p,
 #Contact label {
 flex-direction: flex;
