@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul halaman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<p id="pesan">Teks awal</p>
+<button onclick="ubahTeks()">Ubah Teks</button>
+<script>
+function ubahTeks() {
+document.getElementById("pesan").innerText = "Teks berhasil diubah!";
+}
+</script>
+
+<button id="tombol">Klik Saya</button>
+<script>
+document.getElementById("tombol").addEventListener("click", function() {
+alert("Tombol diklik!");
+});
+</script>
+
+<input type="text" id="nama" placeholder="Masukkan nama">
+<button onclick="cekNama()">Submit</button>
+<script>
+function cekNama() {
+let nama = document.getElementById("nama").value;
+if (nama === "") {
+alert("Nama tidak boleh kosong!");
+} else {
+alert("Halo, " + nama + "!");
+}
+}
+</script>
+
+<body>
+    <script>
+        alert ("Halo Dunia");
+    </script>
+</body>
+
+<body>
+    <header>
+        <h1>Tentang Saya</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+        &#9776;
+    </button>
+        <nav>
+            <ul style="list-style-type: square;">
+                <li><a href="#Home">Beranda</a></li>
+                <li><a href="#About">Tentang</a></li>
+                <li><a href="#Contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main></main>
+    <footer>
+        <section id="Home">
+        <h2>Selamat Datang</h2>
+        <p>Saya Suka Ayam Geprek</p>
+    </section>
+    <section id="About">
+         <h2>Tentang saya</h2> 
+         <p><strong>NIM:</strong> 2511500029</p>
+         <p><strong>Nama Lengkap:</strong> Fiki &#128526;</p>
+         <p><strong>Tempat Lahir:</strong></p>
+         <p><strong>Tanggal Lahir:</strong></p>
+         <p><strong>Hobi:</strong>Menulis dan Membaca &#127926;</p>
+         <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
+         <p><strong>Pekerjaaan:</strong> Mahasiswa</p>
+         <p><strong>Nama Orang Tua: </strong>pak David dn ibu yayudamaayanti</p>
+         <p><strong>Nama Kakak:</strong>Yujos</p>
+         <p><strong>Nama Adek:</strong> Tidak ada</p> 
+    </section>
+    <section id="Contact">
+    <h2>Kontak Saya</h2>
+    <form action="" method="get">
+
+        <label for="txtNama"><span>Nama:</span>
+        <input type="text" id="txtNama" class="nama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+        </label>
+
+        <label for="txtEmail"><span>Email:</span>
+        <input type="email" id="txtEmail" class="oke" name="txtEmail" placeholder="Masukan email" required autocomplete="email">
+        </label>   
+
+        <label for="submit"><span>Pesan:</span>
+        <textarea id="txtPesan" name="txtPesan" class="submit" rows="4" placeholder="Tulis Pesan anda..." required></textarea>
+        <small id="charCount">0/200 karakter</small>
+        </label>  
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+    </form>
+    </section>
+    </footer>
+    <p>&copy; 2025 Fiki [2511500029]</p>
+    <script src="script.js"></script>
+</body>
+</html>
