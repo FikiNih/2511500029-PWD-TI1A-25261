@@ -60,7 +60,7 @@ alert("Halo, " + nama + "!");
         <section id="Home">
         <h2>Selamat Datang</h2>
         <?php
-        echo "Halo Dunia!";
+        echo "Halo Dunia!" <br>;
         echo "Perkenalkan nama saya Fiki";
         ?>
         <p>Saya Suka Ayam Geprek</p>
