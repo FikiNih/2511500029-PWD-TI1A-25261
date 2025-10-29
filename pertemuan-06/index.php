@@ -71,7 +71,11 @@ alert("Halo, " + nama + "!");
         $NIM = "2511500008";
         ?>
          <h2>Tentang saya</h2> 
-         <p><strong>NIM:</strong> 2511500029</p>
+         <p><strong>NIM:</strong> 
+        <?php
+        echo $nim;
+        ?>
+        </p>
          <p><strong>Nama Lengkap:</strong> Fiki &#128526;</p>
          <p><strong>Tempat Lahir:</strong></p>
          <p><strong>Tanggal Lahir:</strong></p>
