@@ -62,6 +62,9 @@ alert("Halo, " + nama + "!");
         <?php
         echo "Halo Dunia!";
         ?>
+        <?php
+        echo "Perkenalkan nama saya Fiki";
+        ?>
         <p>Saya Suka Ayam Geprek</p>
     </section>
     <section id="About">
