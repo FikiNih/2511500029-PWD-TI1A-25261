@@ -59,6 +59,9 @@ alert("Halo, " + nama + "!");
     <footer>
         <section id="Home">
         <h2>Selamat Datang</h2>
+        <?php
+        echo "Halo Dunia!";
+        ?>
         <p>Saya Suka Ayam Geprek</p>
     </section>
     <section id="About">
