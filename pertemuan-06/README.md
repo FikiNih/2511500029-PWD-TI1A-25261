@@ -7,4 +7,5 @@ belajar:
 <ol>
 <li>helo.php</li>
 <li>index.php</li>
+<li>lat1.php</li>
 </ol>
