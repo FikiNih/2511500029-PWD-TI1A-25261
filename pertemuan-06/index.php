@@ -61,8 +61,6 @@ alert("Halo, " + nama + "!");
         <h2>Selamat Datang</h2>
         <?php
         echo "Halo Dunia!";
-        ?>
-        <?php
         echo "Perkenalkan nama saya Fiki";
         ?>
         <p>Saya Suka Ayam Geprek</p>
