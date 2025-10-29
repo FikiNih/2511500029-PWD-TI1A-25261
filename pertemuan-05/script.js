@@ -18,6 +18,7 @@ const homeSection = document.getElementById("home");
 const ucapan = document.createElement("p");
 ucapan.textContent = "Halo! Selamat datang di halaman saya!";
 homeSection.appendChild(ucapan);
+});
 
 function setupCharCountLayout() {
 const label = document.querySelector('label[for="txtPesan"]');
@@ -84,11 +85,10 @@ wrapper.style.display = 'flex';
 wrapper.style.flexDirection = 'column';
 counter.style.alignSelf = 'flex-end';
 counter.style.width = 'auto';
-}
-}
+    }
+        }
 setupCharCountLayout();
 window.addEventListener('resize', applyResponsiveLayout);
-});
 
 
 
