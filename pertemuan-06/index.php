@@ -66,6 +66,10 @@ alert("Halo, " + nama + "!");
         <p>Saya Suka Ayam Geprek</p>
     </section>
     <section id="About">
+        <?php
+        $nim = "2511500029";
+        $NIM = "2511500008";
+        ?>
          <h2>Tentang saya</h2> 
          <p><strong>NIM:</strong> 2511500029</p>
          <p><strong>Nama Lengkap:</strong> Fiki &#128526;</p>
