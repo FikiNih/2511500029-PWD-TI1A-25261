@@ -240,6 +240,12 @@ header li a:active {
         margin-bottom: 2px;
     }
 
+    #About p,
+    #ipk p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 
 }
 
