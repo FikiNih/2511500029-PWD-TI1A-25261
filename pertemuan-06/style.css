@@ -51,9 +51,8 @@ header li a:active {
 
 #Home,
 #About,
-#Contact
-#ipk {
-    background-color: rgb(26, 72, 156);
+#Contact {
+    background-color: lightgray;
     border-radius: 30px;
     padding: 30px;
     max-width: 700px;
@@ -63,10 +62,9 @@ header li a:active {
 
 #Home h2,
 #About h2,
-#Contact h2,
-#ipk h2 {
-    color: #0388ee;
-    border-bottom: 5px solid #0388ee;
+#Contact h2 {
+    color: #0342ff;
+    border-bottom: 5px solid #0342ff;
     padding-bottom: 6px;
     margin-top: 0;
     margin-bottom: 16px;
@@ -95,7 +93,7 @@ header li a:active {
 #About strong,
 #Contact label>span {
     min-width: 180px;
-    color: #0388ee;
+    color: #0342ff;
     font-weight: 600;
     text-align: right;
     padding-right: 16px;
@@ -127,7 +125,7 @@ header li a:active {
 }
 
 #Contact button[type="submit"] {
-    background-color: #0388ee;
+    background-color: #0a0efc;
     color: white;
     font-weight: 600;
     box-shadow: 0 2px 3px black;
@@ -228,20 +226,8 @@ header li a:active {
 }
 
 footer {
-    background: #00e1ff;
+    background: #222;
     color: #aaa;
     text-align: center;
     padding: 10px;
-}
-
-#About h2,
-#ipk h2 {
-    color: #0388ee;
-    border-bottom: 5px solid #0388ee;
-    padding-bottom: 6px;
-    margin-top: 0;
-    margin-bottom: 16px;
-    text-align: center;
-    font-family: sans-serif;
-    font-style: italic;
 }
