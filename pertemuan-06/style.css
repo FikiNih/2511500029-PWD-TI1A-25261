@@ -234,13 +234,12 @@ footer {
 
 #About h2,
 #ipk h2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    margin: 0;
-    padding: 6px 0;
-    border-bottom: 1px solid black;
-    color: black;
-    font-weight: 500;
+    color: #0388ee;
+    border-bottom: 5px solid #0388ee;
+    padding-bottom: 6px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
     font-family: sans-serif;
- }
+    font-style: italic;
+}
