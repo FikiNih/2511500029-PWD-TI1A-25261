@@ -130,10 +130,6 @@ alert("Halo, " + nama + "!");
         echo $NamaAdek;
         ?>
         </p>
-        <p><strong>Nama Lengkap:</strong>
-        <?php 
-        echo $Nama;
-        ?>
     </section>
     <section id="Contact">
     <h2>Kontak Saya</h2>
@@ -175,10 +171,10 @@ alert("Halo, " + nama + "!");
         $nilaiHadir2 = 85;
         $nilaiHadir3 = 90;
         $nilaiHadir4 = 75;
-        $nilaiHadir5 = 95;
+        $nilaiHadir5 = 60;
 
         $nilaiTugas1 = 85;
-        $nilaiTugas2 = 90;
+        $nilaiTugas2 = 80;
         $nilaiTugas3 = 95;
         $nilaiTugas4 = 80;
         $nilaiTugas5 = 75;
@@ -187,7 +183,7 @@ alert("Halo, " + nama + "!");
         $nilaiUTS2 = 85;
         $nilaiUTS3 = 90;
         $nilaiUTS4 = 75;
-        $nilaiUTS5 = 95;
+        $nilaiUTS5 = 90;
 
         $nilaiUAS1 = 85;
         $nilaiUAS2 = 90;
