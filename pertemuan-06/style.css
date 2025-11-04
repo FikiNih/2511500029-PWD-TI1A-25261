@@ -51,8 +51,9 @@ header li a:active {
 
 #Home,
 #About,
-#Contact {
-    background-color: rgb(81, 123, 222);
+#Contact,
+#ipk {
+    background-color: rgb(31, 69, 159);
     border-radius: 30px;
     padding: 30px;
     max-width: 700px;
@@ -62,7 +63,8 @@ header li a:active {
 
 #Home h2,
 #About h2,
-#Contact h2 {
+#Contact h2,
+#ipk h2 {
     color: #1c51f0;
     border-bottom: 5px solid #2c5ceb;
     padding-bottom: 6px;
@@ -78,7 +80,8 @@ header li a:active {
 }
 
 #About p,
-#Contact label {
+#Contact label,
+#ipk p {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -223,6 +226,21 @@ header li a:active {
     #Contact button {
         width: 100%;
     }
+
+    #About p,
+    #ipk p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+     #About strong,
+     #ipk strong {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 2px;
+    }
+
+
 }
 
 footer {
