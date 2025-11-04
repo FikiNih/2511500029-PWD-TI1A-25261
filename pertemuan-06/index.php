@@ -52,6 +52,7 @@ alert("Halo, " + nama + "!");
                 <li><a href="#Home">Beranda</a></li>
                 <li><a href="#About">Tentang</a></li>
                 <li><a href="#Contact">Kontak</a></li>
+                <li><a href="#ipk">IPK</a></li>
             </ul>
         </nav>
     </header> 
@@ -67,17 +68,17 @@ alert("Halo, " + nama + "!");
     </section>
     <section id="About">
         <?php
-        $nim = "2511500029";
-        $NIM = "2511500008";
-        $Nama = "Fiki";
-        $TempatLahir = "Mentok";
-        $TanggalLahir = "10 September 2007";
-        $Hobi = "Menulis dan membaca buku";
-        $Pasangan = "Belum ada &hearts";
-        $Pekerjaan = "Mahasiswa";
-        $NamaOrangTua = "Pak David dan Ibu Yayudamayanti";
-        $NamaKakak = "Yujos";
-        $NamaAdek = "Tidak Punya";
+     $nim = "2511500029";
+         $NIM = "2511500008";
+         $Nama = "Fiki &#128526;";
+         $TempatLahir = "Mentok";
+         $TanggalLahir = "10 September 2007";
+         $Hobi = "Menulis dan membaca buku";
+         $Pasangan = "Belum ada &hearts;";
+         $Pekerjaan = "Mahasiswa";
+         $NamaOrangTua = "Pak David dan Ibu Yayudamayanti";
+         $NamaKakak = "Yujos";
+         $NamaAdek = "Tidak Punya";
         ?>
          <h2>Tentang saya</h2> 
          <p><strong>NIM:</strong> 
@@ -150,6 +151,34 @@ alert("Halo, " + nama + "!");
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
     </form>
+    </section>
+    <section id="ipk">
+    <h2>Nilai Saya</h2>
+        <?php
+        $namaMatkul1 = "Kalkulus";
+        $namaMatkul2 = "Logika Informatika";
+        $namaMatkul3 = "Pengantar Teknik Informatika";
+        $namaMatkul4 = "Aplikasi Perkantoran";
+        $namaMatkul5 = "Basis Data";
+
+        $sksMatkul1 = 3;
+        $sksMatkul2 = 3;
+        $sksMatkul3 = 3;
+        $sksMatkul4 = 2;
+        $sksMatkul5 = 2;
+
+        $nilaiHadir1 = 80;
+        $nilaiHadir2 = 85;
+        $nilaiHadir3 = 90;
+        $nilaiHadir4 = 75;
+        $nilaiHadir5 = 95;
+
+        $nilaiTugas1 = 85;
+        $nilaiTugas2 = 90;
+        $nilaiTugas3 = 95;
+        $nilaiTugas4 = 80;
+        $nilaiTugas5 = 75;
+        ?>  
     </section>
     </footer>
     <p>&copy; 2025 Fiki [2511500029]</p>
