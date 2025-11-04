@@ -257,7 +257,7 @@ footer {
 }
 
 #About p,
-#Contact p {
+#ipk p {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
