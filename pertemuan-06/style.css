@@ -94,7 +94,8 @@ header li a:active {
 }
 
 #About strong,
-#Contact label>span {
+#Contact label>span,
+#ipk strong {
     min-width: 180px;
     color: #3056ca;
     font-weight: 600;
@@ -107,7 +108,7 @@ header li a:active {
 #Contact textarea {
     flex: 1;
     border: none;
-    border-radius: 40px;
+    border-radius: 20px;
     padding: 10px;
     color: black;
     font-weight: normal;
