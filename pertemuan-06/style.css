@@ -264,7 +264,7 @@ footer {
     margin: 0;
     padding: 6px 0;
     border-bottom: 1px solid black;
-    color: black;
+    color: rgb(5, 60, 209);
     font-weight: 500;
     font-family: sans-serif;
 }
