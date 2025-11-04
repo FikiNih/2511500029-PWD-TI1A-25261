@@ -301,6 +301,100 @@ alert("Halo, " + nama + "!");
         <?php 
         echo $Status1 = $hasil['status'];
         ?>
+
+        <h2><br></h2>
+        <p><strong>Nama Matkul:</strong>
+        <?php
+        echo $namaMatkul2;
+        ?>
+        </p>
+        <p><strong>SKS:</strong>
+        <?php 
+        echo $sksMatkul2;
+        ?>
+        <p><strong>Kehadiran:</strong>
+        <?php 
+        echo $nilaiHadir2;
+        ?>
+        <p><strong>Tugas:</strong>
+        <?php 
+        echo $nilaiTugas2;
+        ?>
+        <p><strong>UTS:</strong>
+        <?php 
+        echo $nilaiUTS2;
+        ?>
+        <p><strong>UAS:</strong>
+        <?php 
+        echo $nilaiUAS2;
+        ?>
+        <p><strong>Nilai Akhir:</strong>
+        <?php 
+        echo $NnilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
+        ?>
+        <p><strong>Grade:</strong>
+        <?php 
+        echo $Grade2 = $hasil['grade'];
+        ?>
+        <p><strong>Angka Mutu:</strong>
+        <?php 
+        echo $Mutu2 = $hasil['angkaMutu'];
+        ?>
+        <p><strong>Bobot:</strong>
+        <?php 
+        echo $Bobot2 = $sksMatkul2 * $Mutu2;
+        ?>
+        <p><strong>Status:</strong>
+        <?php 
+        echo $Status2 = $hasil['status'];
+        ?>
+
+        <h2><br></h2>
+        <p><strong>Nama Matkul:</strong>
+        <?php
+        echo $namaMatkul3;
+        ?>
+        </p>
+        <p><strong>SKS:</strong>
+        <?php 
+        echo $sksMatkul3;
+        ?>
+        <p><strong>Kehadiran:</strong>
+        <?php 
+        echo $nilaiHadir3;
+        ?>
+        <p><strong>Tugas:</strong>
+        <?php 
+        echo $nilaiTugas3;
+        ?>
+        <p><strong>UTS:</strong>
+        <?php 
+        echo $nilaiUTS3;
+        ?>
+        <p><strong>UAS:</strong>
+        <?php 
+        echo $nilaiUAS3;
+        ?>
+        <p><strong>Nilai Akhir:</strong>
+        <?php 
+        echo $NnilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
+        ?>
+        <p><strong>Grade:</strong>
+        <?php 
+        echo $Grade3 = $hasil['grade'];
+        ?>
+        <p><strong>Angka Mutu:</strong>
+        <?php 
+        echo $Mutu3 = $hasil['angkaMutu'];
+        ?>
+        <p><strong>Bobot:</strong>
+        <?php 
+        echo $Bobot3 = $sksMatkul3 * $Mutu3;
+        ?>
+        <p><strong>Status:</strong>
+        <?php 
+        echo $Status3 = $hasil['status'];
+        ?>
     </section>
     </footer>
     <p>&copy; 2025 Fiki [2511500029]</p>
