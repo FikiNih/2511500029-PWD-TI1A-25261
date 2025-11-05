@@ -1,5 +1,9 @@
 <?php
-    echo $_GET['txtNama'];
+    session_start();
+    $sesname = $_SESSION["nama"];
+    $sesemail = $_SESSION["email"];
+    $sespesan = $_SESSION["pesan"];
+    echo "sesname: $sesname, sesemail: $sesemail, sespesan: $sespesan";
 ?>
 
 <!DOCTYPE html>
