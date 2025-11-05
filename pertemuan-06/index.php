@@ -162,34 +162,34 @@ alert("Halo, " + nama + "!");
         $namaMatkul5 = "Basis Data";
 
         $sksMatkul1 = 4;
-        $sksMatkul2 = 3;
+        $sksMatkul2 = 5;
         $sksMatkul3 = 3;
-        $sksMatkul4 = 2;
-        $sksMatkul5 = 3;
+        $sksMatkul4 = 4;
+        $sksMatkul5 = 5;
 
         $nilaiHadir1 = 80;
         $nilaiHadir2 = 85;
-        $nilaiHadir3 = 90;
-        $nilaiHadir4 = 75;
-        $nilaiHadir5 = 60;
+        $nilaiHadir3 = 95;
+        $nilaiHadir4 = 80;
+        $nilaiHadir5 = 66;
 
-        $nilaiTugas1 = 85;
-        $nilaiTugas2 = 80;
-        $nilaiTugas3 = 95;
-        $nilaiTugas4 = 80;
-        $nilaiTugas5 = 75;
+        $nilaiTugas1 = 80;
+        $nilaiTugas2 = 87;
+        $nilaiTugas3 = 90;
+        $nilaiTugas4 = 68;
+        $nilaiTugas5 = 95;
 
         $nilaiUTS1 = 80;
-        $nilaiUTS2 = 85;
-        $nilaiUTS3 = 90;
+        $nilaiUTS2 = 78;
+        $nilaiUTS3 = 91;
         $nilaiUTS4 = 75;
-        $nilaiUTS5 = 90;
+        $nilaiUTS5 = 94;
 
         $nilaiUAS1 = 85;
-        $nilaiUAS2 = 90;
-        $nilaiUAS3 = 95;
-        $nilaiUAS4 = 80;
-        $nilaiUAS5 = 75;
+        $nilaiUAS2 = 80;
+        $nilaiUAS3 = 91;
+        $nilaiUAS4 = 75;
+        $nilaiUAS5 = 93;
         ?>
 
         <?php
@@ -252,8 +252,12 @@ alert("Halo, " + nama + "!");
         $nilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
         $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
         $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
-                
-        $hasil = grade($nilaiAkhir1, $nilaiHadir1);
+
+        $hasil1 = grade($nilaiAkhir1, $nilaiHadir1);
+        $hasil2 = grade($nilaiAkhir2, $nilaiHadir2);
+        $hasil3 = grade($nilaiAkhir3, $nilaiHadir3);
+        $hasil4 = grade($nilaiAkhir4, $nilaiHadir4);
+        $hasil5 = grade($nilaiAkhir5, $nilaiHadir5);
         ?>
 
         <p><strong>Nama Matkul:</strong>
@@ -287,11 +291,11 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Grade:</strong>
         <?php 
-        echo $Grade1 = $hasil['grade'];
+        echo $Grade1 = $hasil1['grade'];
         ?>
         <p><strong>Angka Mutu:</strong>
         <?php 
-        echo $Mutu1 = $hasil['angkaMutu'];
+        echo $Mutu1 = $hasil1['angkaMutu'];
         ?>
         <p><strong>Bobot:</strong>
         <?php 
@@ -299,7 +303,7 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Status:</strong>
         <?php 
-        echo $Status1 = $hasil['status'];
+        echo $Status1 = $hasil1['status'];
         ?>
 
         <h2><br></h2>
@@ -334,11 +338,11 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Grade:</strong>
         <?php 
-        echo $Grade2 = $hasil['grade'];
+        echo $Grade2 = $hasil2['grade'];
         ?>
         <p><strong>Angka Mutu:</strong>
         <?php 
-        echo $Mutu2 = $hasil['angkaMutu'];
+        echo $Mutu2 = $hasil2['angkaMutu'];
         ?>
         <p><strong>Bobot:</strong>
         <?php 
@@ -346,7 +350,7 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Status:</strong>
         <?php 
-        echo $Status2 = $hasil['status'];
+        echo $Status2 = $hasil2['status'];
         ?>
 
         <h2><br></h2>
@@ -381,11 +385,11 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Grade:</strong>
         <?php 
-        echo $Grade3 = $hasil['grade'];
+        echo $Grade3 = $hasil3['grade'];
         ?>
         <p><strong>Angka Mutu:</strong>
         <?php 
-        echo $Mutu3 = $hasil['angkaMutu'];
+        echo $Mutu3 = $hasil3['angkaMutu'];
         ?>
         <p><strong>Bobot:</strong>
         <?php 
@@ -393,7 +397,101 @@ alert("Halo, " + nama + "!");
         ?>
         <p><strong>Status:</strong>
         <?php 
-        echo $Status3 = $hasil['status'];
+        echo $Status3 = $hasil3['status'];
+        ?>
+
+        <h2><br></h2>
+        <p><strong>Nama Matkul:</strong>
+        <?php
+        echo $namaMatkul4;
+        ?>
+        </p>
+        <p><strong>SKS:</strong>
+        <?php 
+        echo $sksMatkul4;
+        ?>
+        <p><strong>Kehadiran:</strong>
+        <?php 
+        echo $nilaiHadir4;
+        ?>
+        <p><strong>Tugas:</strong>
+        <?php 
+        echo $nilaiTugas4;
+        ?>
+        <p><strong>UTS:</strong>
+        <?php 
+        echo $nilaiUTS4;
+        ?>
+        <p><strong>UAS:</strong>
+        <?php 
+        echo $nilaiUAS4;
+        ?>
+        <p><strong>Nilai Akhir:</strong>
+        <?php 
+        echo $NnilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
+        ?>
+        <p><strong>Grade:</strong>
+        <?php 
+        echo $Grade4 = $hasil4['grade'];
+        ?>
+        <p><strong>Angka Mutu:</strong>
+        <?php 
+        echo $Mutu4 = $hasil4['angkaMutu'];
+        ?>
+        <p><strong>Bobot:</strong>
+        <?php 
+        echo $Bobot4 = $sksMatkul4 * $Mutu4;
+        ?>
+        <p><strong>Status:</strong>
+        <?php 
+        echo $Status4 = $hasil4['status'];
+        ?>
+        <h2><br></h2>
+        <p><strong>Nama Matkul:</strong>
+        <?php
+        echo $namaMatkul5;
+        ?>
+        </p>
+
+        <p><strong>SKS:</strong>
+        <?php 
+        echo $sksMatkul5;
+        ?>
+        <p><strong>Kehadiran:</strong>
+        <?php 
+        echo $nilaiHadir5;
+        ?>
+        <p><strong>Tugas:</strong>
+        <?php 
+        echo $nilaiTugas5;
+        ?>
+        <p><strong>UTS:</strong>
+        <?php 
+        echo $nilaiUTS5;
+        ?>
+        <p><strong>UAS:</strong>
+        <?php 
+        echo $nilaiUAS5;
+        ?>
+        <p><strong>Nilai Akhir:</strong>
+        <?php 
+        echo $NnilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
+        ?>
+        <p><strong>Grade:</strong>
+        <?php 
+        echo $Grade5 = $hasil5['grade'];
+        ?>
+        <p><strong>Angka Mutu:</strong>
+        <?php 
+        echo $Mutu5 = $hasil5['angkaMutu'];
+        ?>
+        <p><strong>Bobot:</strong>
+        <?php 
+        echo $Bobot5 = $sksMatkul5 * $Mutu5;
+        ?>
+        <p><strong>Status:</strong>
+        <?php 
+        echo $Status5 = $hasil5['status'];
         ?>
     </section>
     </footer>
