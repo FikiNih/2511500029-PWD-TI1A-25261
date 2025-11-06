@@ -68,7 +68,7 @@ alert("Halo, " + nama + "!");
     </section>
     <section id="About">
         <?php
-     $nim = "2511500029";
+         $nim = "2511500029";
          $NIM = "2511500008";
          $Nama = "Fiki &#128526;";
          $TempatLahir = "Mentok";
@@ -159,36 +159,36 @@ alert("Halo, " + nama + "!");
         $namaMatkul2 = "Logika Informatika";
         $namaMatkul3 = "Pengantar Teknik Informatika";
         $namaMatkul4 = "Aplikasi Perkantoran";
-        $namaMatkul5 = "Basis Data";
+        $namaMatkul5 = "Konsep Basis Data";
 
-        $sksMatkul1 = 4;
-        $sksMatkul2 = 5;
+        $sksMatkul1 = 3;
+        $sksMatkul2 = 3;
         $sksMatkul3 = 3;
-        $sksMatkul4 = 4;
-        $sksMatkul5 = 5;
+        $sksMatkul4 = 3;
+        $sksMatkul5 = 3;
 
-        $nilaiHadir1 = 80;
+        $nilaiHadir1 = 91;
         $nilaiHadir2 = 85;
         $nilaiHadir3 = 95;
         $nilaiHadir4 = 80;
-        $nilaiHadir5 = 66;
+        $nilaiHadir5 = 69;
 
-        $nilaiTugas1 = 80;
+        $nilaiTugas1 = 88;
         $nilaiTugas2 = 87;
         $nilaiTugas3 = 90;
-        $nilaiTugas4 = 68;
+        $nilaiTugas4 = 78;
         $nilaiTugas5 = 95;
 
         $nilaiUTS1 = 80;
         $nilaiUTS2 = 78;
         $nilaiUTS3 = 91;
-        $nilaiUTS4 = 75;
+        $nilaiUTS4 = 92;
         $nilaiUTS5 = 94;
 
         $nilaiUAS1 = 85;
         $nilaiUAS2 = 80;
         $nilaiUAS3 = 91;
-        $nilaiUAS4 = 75;
+        $nilaiUAS4 = 88;
         $nilaiUAS5 = 93;
         ?>
 
@@ -493,6 +493,30 @@ alert("Halo, " + nama + "!");
         <?php 
         echo $Status5 = $hasil5['status'];
         ?>
+        
+    <?php
+    $angkaMutuTotal = $Mutu1 + $Mutu2 + $Mutu3 + $Mutu4 + $Mutu5;
+    $sksTotal = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
+    $totalBobot = $Bobot1 + $Bobot2 + $Bobot3 + $Bobot4 + $Bobot5;
+    $ipk = $totalBobot / $sksTotal;
+    ?>
+
+    <h2>Penilaian Akhir<br></h2>
+    <p><strong>Total Bobot:</strong>
+    <?php
+    echo $totalBobot;
+    ?>
+    </p>
+
+    <p><strong>Total SKS:</strong>
+    <?php 
+    echo $sksTotal;
+    ?>
+    </p>
+    <p><strong>IPK:</strong>
+    <?php
+    echo $ipk;
+    ?>
     </section>
     </footer>
     <p>&copy; 2025 Fiki [2511500029]</p>
