@@ -161,11 +161,11 @@ alert("Halo, " + nama + "!");
         $namaMatkul4 = "Aplikasi Perkantoran";
         $namaMatkul5 = "Konsep Basis Data";
 
-        $sksMatkul1 = 3;
-        $sksMatkul2 = 3;
-        $sksMatkul3 = 3;
-        $sksMatkul4 = 3;
-        $sksMatkul5 = 3;
+        $sksMatkul1 = 4;
+        $sksMatkul2 = 4;
+        $sksMatkul3 = 4;
+        $sksMatkul4 = 4;
+        $sksMatkul5 = 4;
 
         $nilaiHadir1 = 91;
         $nilaiHadir2 = 85;
