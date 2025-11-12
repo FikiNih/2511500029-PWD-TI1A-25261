@@ -9,4 +9,5 @@ Kelompok: TI1A<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Menambahkan section Pendaftaran Profil Pengunjung dan Input</li>
+  <li>Menambahkan style pada section Pendaftaran</li>
 </ol>

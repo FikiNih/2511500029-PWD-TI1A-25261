@@ -36,7 +36,7 @@ endif;
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
-        <li><a href="#pendaaftaran">Pendaftaran Profil Pengunjung</a></li>
+        <li><a href="#pendaftaran">Pendaftaran Profil Pengunjung</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
@@ -51,6 +51,59 @@ endif;
       echo "nama saya hadi";
       ?>
       <p>Ini contoh paragraf HTML.</p>
+    </section>
+    <section id="pendaftaran">
+      <h2>Pendaftaran Profil Pengunjung</h2>
+      <form action="proses.php" method="POST">
+
+        <label for="txtNIM"><span>NIM:</span>
+          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM anda" required autocomplete="name">
+        </label>
+
+        <label for="txtLengkap"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNamaLengkap" name="txtNamaLengkap" placeholder="Masukkan nama lengkap" required autocomplete="name">
+        </label>
+
+        <label for="txtTempat"><span>Tempat Lahir:</span>
+          <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan tempat lahir" required autocomplete="address-level2">
+        </label>
+
+        <label for="txtTanggal"><span>Tanggal Lahir:</span>
+          <input type="date" id="txtTanggal" name="txtTanggal" required>
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan hobi anda" required autocomplete="hobby">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan nama pasangan" required autocomplete="name">
+        </label>
+
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan anda" required autocomplete="organization">
+        </label>
+
+        <label for="txtOrtu"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Masukkan nama orang tua" required autocomplete="name">
+        </label>
+
+        <label for="txtKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak" required autocomplete="name">
+        </label>
+
+        <label for="txtAdik"><span>Nama Adik:</span>
+          <input type="text" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik" required autocomplete="name">
+        </label>
+
+        <label for="txtPesan"><span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <small id="charCount">0/200 karakter</small>
+        </label>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
     </section>
 
     <section id="about">
@@ -87,18 +140,12 @@ endif;
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama anda" required autocomplete="name">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
           <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
         </label>
-
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-          <small id="charCount">0/200 karakter</small>
-        </label>
-
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
