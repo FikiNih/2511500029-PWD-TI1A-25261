@@ -109,7 +109,8 @@ header li a:active {
   flex-shrink: 0;
 }
 
-#pendaftaran,
+#pendaftaran input,
+#pendaftaran textarea,
 #contact input,
 #contact textarea {
   flex: 1;
