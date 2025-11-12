@@ -54,7 +54,7 @@ endif;
     </section>
     <section id="pendaftaran">
       <h2>Pendaftaran Profil Pengunjung</h2>
-      <form action="proses.php" method="POST">
+      <form action="uts_proses.php" method="POST">
 
         <label for="txtNIM"><span>NIM:</span>
           <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM anda" required autocomplete="name">
@@ -94,11 +94,6 @@ endif;
 
         <label for="txtAdik"><span>Nama Adik:</span>
           <input type="text" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik" required autocomplete="name">
-        </label>
-
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-          <small id="charCount">0/200 karakter</small>
         </label>
 
         <button type="submit">Kirim</button>
@@ -145,6 +140,11 @@ endif;
 
         <label for="txtEmail"><span>Email:</span>
           <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+        </label>
+
+        <label for="txtPesan"><span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <small id="charCount">0/200 karakter</small>
         </label>
 
         <button type="submit">Kirim</button>

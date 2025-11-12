@@ -11,4 +11,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>Menambahkan section Pendaftaran Profil Pengunjung dan Input</li>
   <li>Menambahkan style pada section Pendaftaran</li>
   <li>Perbaikan pada style</li>
+  <li>Menambahkan file proses</li>
 </ol>
