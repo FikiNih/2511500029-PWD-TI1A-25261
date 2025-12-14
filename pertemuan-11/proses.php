@@ -1,6 +1,75 @@
 <?php
 session_start();
 
+
+
+
+if ($_SERVER[ 'REQUEST_METHOD'] !== 'POST') {
+  $_SESSION['flash_error'] = "Akses tidak valid.";
+  redirrect('index.php#contact');
+}
+
+
+$nama = bersihkan($_POST['txtNama'] ?? "");
+$email = bersihkan($_POST['txtEmail'] ?? "");
+$pesan = bersihkan($_POST['txtPesan'] ?? "");
+
+#Validasi Sederhana
+$errors = []; #Array penampung
+
+if ($nama === '') {
+  $errors[] = 'nama wajib diisi.';
+}
+
+if ($email === '') {
+  $errors[] = 'email wajib diisi.';
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $errors[] = 'format e-mail tidak valid.';
+}
+
+if ($pesan === '') {
+  $errors[] = 'pesan wajib diisi.'
+}
+
+if (!empty($errors)) {
+  $_SESSION['$old'] = [
+    'nama' => $nama,
+    'email' => $email,
+    'pesan' => $pesan,
+  ];
+
+  $_SESSION['flash_error'] = implode('<br>', $errors);
+  redirect_ke('index.php#contact');
+}
+
+#query INSERT
+$sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+$stmt = mysqli_prepare($conn, $sql);
+
+if (!$stmt) {
+  #jika gagal prepare,
+  $_SESSION['flash_error'] = 'terjadi kesalahan sistem (prepare gagal).';
+  redirect_ke('index.php#contact');
+}
+#bind parameter
+mysqli_stmt_bind_param($stmt "sss", $nama $email $pesan);
+
+if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value, beri pesan sukses
+  unset($_SESSION['old']);
+  $_SESSION['flash_sukses'] = 'Terima Kasih data anda sudah tersimpan.';
+  redirect_ke('index.php#contact'); #pola PRG
+} else { #jika gagal, simpan kembali old value
+  $_SESSION['old'] = [
+    'nama' => $nama,
+    'email' => $email,
+    'pesan' => $pesan, 
+  ];
+  $_SESSION['flash_error'] = 'Data gagal disimpan. silahkan coba lagi.';
+  redirect_ke('index.php#contact');
+}
+#tutup statement
+mysqli_smtm_close($stmt);
+
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",
   "email" => $_POST["txtEmail"] ?? "",
