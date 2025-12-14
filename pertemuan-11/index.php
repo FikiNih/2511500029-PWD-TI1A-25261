@@ -111,7 +111,7 @@ require_once __DIR__ . '/fungsi.php';
 
     <?php
     $flash_sukses = $_SESSION["flash_sukses"] ?? ''; #jika query sukses
-    $flash_error = $_SESSION["flash_error"] ?? ''; #jika ada error
+    $flash_error = $_SESSION["flash_error"] ?? ''; #jika query gagal
     $old = $_SESSION["old"] ?? []; #untuk nilai lama
 
     unset($_SESSION["flash_sukses"], $_SESSION["flash_error"], $_SESSION["old"]); #hapus session setelah digunakan
@@ -120,15 +120,15 @@ require_once __DIR__ . '/fungsi.php';
     <section id="contact">
       <h2>Kontak Kami</h2>
 
-      <?php if ($flash_sukses): ?>
-        <div style="padding:10px; margin-botom:10px; background:#155724; color:#155724; border-radius:6px;">
-          <?= $flash_sukses ?>
-        </div>
-      <?php endif; ?>
+    <?php if (!empty($flash_sukses)): ?>
+      <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+        <?= $flash_sukses; ?>
+      </div>
+    <?php endif; ?>
 
-      <?php elseif ($flash_error): ?>
-        <div style="padding:10px; margin-botom:10px; background:#721c24; color:#721c24; border-radius:6px;">
-          <?= $flash_error ?>
+      <?php if (!empty($flash_error)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_error; ?>
         </div>
       <?php endif; ?>
 
@@ -145,8 +145,8 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required>
-          <?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea> 
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
+           required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
