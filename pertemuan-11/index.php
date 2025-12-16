@@ -110,13 +110,17 @@ require_once __DIR__ . '/fungsi.php';
     </section>
 
     <?php
-    $flash_sukses = $_SESSION["flash_sukses"] ?? ''; #jika query sukses
-    $flash_error = $_SESSION["flash_error"] ?? ''; #jika query gagal
-    $old = $_SESSION["old"] ?? []; #untuk nilai lama
+    $flash_sukses = $_SESSION["flash_sukses"] ?? ''; 
+    $flash_error = $_SESSION["flash_error"] ?? '';
+    $old = $_SESSION["old"] ?? [];
 
-    unset($_SESSION["flash_sukses"], $_SESSION["flash_error"], $_SESSION["old"]); #hapus session setelah digunakan
+    unset($_SESSION["flash_sukses"], $_SESSION["flash_error"], $_SESSION["old"]); 
     ?>
-
+<?php
+$angka1 = rand(1, 9); 
+$angka2 = rand(1, 9); 
+$_SESSION["hasil"]  = $angka1 + $angka2;
+?>
     <section id="contact">
       <h2>Kontak Kami</h2>
 
@@ -149,7 +153,9 @@ require_once __DIR__ . '/fungsi.php';
            required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
-
+<label>Verifikasi Keamanan:</label><br>
+        <b>Berapa hasil <?php echo $angka1; ?> + <?php echo $angka2; ?> ?</b><br>
+        <input type="number" name="jawaban_captcha" required placeholder="Isi hasil penjumlahan"><br><br>
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>

@@ -9,16 +9,19 @@ if ($_SERVER[ 'REQUEST_METHOD'] !== 'POST') {
   redirect_ke('index.php#contact');
 }
 
-#bersihkan input
+
 $nama  = bersihkan($_POST['txtNama'] ?? "");
 $email = bersihkan($_POST['txtEmail'] ?? "");
 $pesan = bersihkan($_POST['txtPesan'] ?? "");
+$jawaban_captcha = $_POST['jawaban_captcha'] ?? "";
+$hasil = $_SESSION ["hasil"]?? null;
 
-#Validasi Sederhana
+
+
 $errors = [];
 
-if (empty($nama)) {
-  $errors[] = 'Nama wajib diisi.';
+if (strlen(trim($nama)) < 3) {
+  $errors[] = 'Nama wajib diisi minimal 3 karakter.';
 }
 
 if (empty($email)) {
@@ -27,8 +30,14 @@ if (empty($email)) {
   $errors[] = 'Format email tidak valid.';
 }
 
-if (empty($pesan)) {
-  $errors[] = 'Pesan wajib diisi.';
+if (strlen(trim($pesan)) < 10) {
+  $errors[] = 'Pesan wajib diisi minimal 10 karakter.';
+}
+
+if ($jawaban_captcha === "") {
+  $errors[] = "Mohon mengisi Verifikasi";
+} elseif (!is_numeric($jawaban_captcha) || (int)$jawaban_captcha !== (int)$hasil) {
+  $errors[] = "jawaban tidak vaild";
 }
 
 if (!empty($errors)) {
@@ -41,24 +50,24 @@ if (!empty($errors)) {
   redirect_ke('index.php#contact');
 }
 
-#query INSERT
+
 $sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
-  #jika gagal prepare
+ 
   $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
   redirect_ke('index.php#contact');
 }
-#Bind parameter
+
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
-if (mysqli_stmt_execute($stmt)) { #jika berhasil
+if (mysqli_stmt_execute($stmt)) {
   unset ($_SESSION['old']);
   $_SESSION['flash_sukses'] = 'Terima kasih, Data anda sudah tersimpan.';
   redirect_ke('index.php#contact');
 } else {
-  #jika gagal eksekusi
+
   $_SESSION['old'] = [
     "nama" => $nama,
     "email" => $email,

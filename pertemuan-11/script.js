@@ -89,24 +89,24 @@ document.addEventListener("DOMContentLoaded", function () {
     setupCharCountLayout();
     window.addEventListener('resize', applyResponsiveLayout);
 });
- document.querySelector("form").addEventListener("submit", function (e) {
-     const nama = document.getElementById("txtNama");
+
+document.querySelector("form").addEventListener("submit", function (e) {
+    // const nama = document.getElementById("txtNama");
     // const email = document.getElementById("txtEmail");
-    const pesan = document.getElementById("txtPesan");
+    // const pesan = document.getElementById("txtPesan");
     // e.preventDefault();
-     let isValid = true;
+    // let isValid = true;
 
     // document.querySelectorAll(".error-msg").forEach(el => el.remove());
     // [nama, email, pesan].forEach(el => el.style.border = "");
 
-     if (nama.value.trim().length < 3) {
-
-        showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
-        isValid = false;
-    } else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
-        showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
-        isValid = false;
-    }
+    // if (nama.value.trim().length < 3) {
+    //     showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
+    //     isValid = false;
+    // } else if (!/^[A-Za-z\s]+$/.test(nama.value)) {
+    //     showError(nama, "Nama hanya boleh berisi huruf dan spasi.");
+    //     isValid = false;
+    // }
     // if (email.value.trim() === "") {
     //     showError(email, "Email wajib diisi.");
     //     isValid = false;
@@ -115,13 +115,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //     isValid = false;
     // }
 
-     if (pesan.value.trim() === "") {
+    // if (pesan.value.trim() === "") {
     //     showError(pesan, "Pesan wajib diisi.");
     //     isValid = false;
-     } else if (pesan.value.trim().length < 10) {
-         showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
-         isValid = false;
-     }
+    // } else if (pesan.value.trim().length < 10) {
+    //     showError(pesan, "Pesan minimal 10 karakter agar lebih jelas.");
+    //     isValid = false;
+    // }
 
     // if (!isValid) {
     //     e.preventDefault();
