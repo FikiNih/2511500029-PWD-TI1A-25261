@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 03, 2025 at 05:35 AM
+-- Generation Time: Dec 16, 2025 at 01:28 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_pwd2025`
 --
-CREATE DATABASE IF NOT EXISTS `db_pwd2025` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `db_pwd2025`;
 
 -- --------------------------------------------------------
 
@@ -33,17 +31,25 @@ CREATE TABLE `tbl_tamu` (
   `cid` int(11) NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
-  `cpesan` text
+  `cpesan` text,
+  `dcreated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_tamu`
 --
 
-INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`) VALUES
-(1, 'Fiki', 'akumanusia@gmail.com', 'hai hai haii hai  hai hai hai hai hi'),
-(2, 'Fiki', 'Tester1@gmail.com', 'ayo kita berangkat sekolah\r\n'),
-(3, 'Wulandari', 'fishit@gmail.com', 'Nur Fadila ngakak cantik banget');
+INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+(1, 'Fiki', 'akumanusia@gmail.com', 'hai hai haii hai  hai hai hai hai hi', '2025-12-16 09:44:48'),
+(2, 'Fiki', 'Tester1@gmail.com', 'ayo kita berangkat sekolah\r\n', '2025-12-16 09:44:48'),
+(3, 'Wulandari', 'fishit@gmail.com', 'Nur Fadila ngakak cantik banget', '2025-12-16 09:44:48'),
+(4, 'Pria fomo', 'Pria@awo.com', 'aku fomo suka ikut ikutan', '2025-12-16 09:44:48'),
+(6, 'qq', 'Pria@awo.com', 'fwef', '2025-12-16 09:44:48'),
+(9, 'Fiki ngetes', 'Pria@awo.com', 'Ngetes dlu bang kayaknya gagal lagi', '2025-12-16 09:44:48'),
+(10, 'Fiki ngetes', 'Pria@awo.com', 'halooooooo', '2025-12-16 09:44:48'),
+(11, 'Fiki ngetes', 'Pria@awo.com', 'hayuuuuuuukkk', '2025-12-16 09:44:48'),
+(12, 'Sigma boy', 'sigma@a.com', 'aaaaaaaaaaaaaaaa', '2025-12-16 09:44:48'),
+(13, 'aku anak mama', 'sigma@a.com', 'hai aku adalah...', '2025-12-16 09:46:11');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +69,7 @@ ALTER TABLE `tbl_tamu`
 -- AUTO_INCREMENT for table `tbl_tamu`
 --
 ALTER TABLE `tbl_tamu`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
