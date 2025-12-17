@@ -21,7 +21,7 @@
         ?>
             <tr>
                 <td><?= $no++; ?></td> 
-                
+                <td><a href="edit.php?id=<?= $row['cid']; ?>"><?= $row['cid']; ?></a></td>
                 <td><?= $row['cid']; ?></td>
                 <td><?= $row['cnama']; ?></td>
                 <td><?= $row['cemail']; ?></td>
