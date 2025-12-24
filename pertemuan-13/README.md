@@ -10,4 +10,6 @@ NIM:2511500029
 <li> copy code yang ada di proses_update.php</li>
 <li> menghapus kode form yang sudah tidak digunakan lagi<li>
 <li> menambahkan parameter cid untuk link delete di read.php</li>
+<li> memperbaiki file proses_delete.php agar dapat menggunakan parameter</li>
+<li> menambaahkan konfirmasi penghapusan di read.php</li>
 <ol>
