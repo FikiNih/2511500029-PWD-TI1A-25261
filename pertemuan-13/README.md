@@ -8,4 +8,5 @@ NIM:2511500029
 <li> menambahkan link delete di read.php</li>
 <li> menambahkan Proses_delete.php</li>
 <li> copy code yang ada di proses_update.php</li>
+<li> menghapus kode form yang sudah tidak digunakan lagi<li>
 <ol>
