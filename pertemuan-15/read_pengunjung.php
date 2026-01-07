@@ -38,7 +38,7 @@ unset($_SESSION['flash_sukses_mhs'], $_SESSION['flash_error_mhs']);
             text-align: left;
         }
         .data-Pengunjung th {
-            background-color: #de0c0cff;
+            background-color: #ded00cff;
             color: white;
             font-weight: bold;
         }
@@ -61,7 +61,7 @@ unset($_SESSION['flash_sukses_mhs'], $_SESSION['flash_error_mhs']);
             font-size: 14px;
         }
         .btn-hapus {
-            background-color: #dc3545;
+            background-color: #e2fe0cff;
             color: white;
             padding: 6px 12px;
             border-radius: 4px;
