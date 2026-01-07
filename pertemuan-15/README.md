@@ -10,4 +10,5 @@ Hari ini mengerjakan Tryout, Rabu 07 januari 2026
 <li>menambahkan file proses_pengunjung</li>
 <li>menambahkan read_pengunjung.php</li>
 <li>menambahkan file edit_pengunjung</li>
+<li>mengisi kode aksi edit dan hapus data</li>
 </ol>
