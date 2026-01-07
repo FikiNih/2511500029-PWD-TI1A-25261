@@ -10,14 +10,14 @@ $cmid = filter_input(INPUT_GET, 'cmid', FILTER_VALIDATE_INT, [
 
 if (!$cmid) {
     $_SESSION['flash_error_mhs'] = 'Akses tidak valid.';
-    redirect_ke('read_mahasiswa.php');
+    redirect_ke('read_pengunjung.php');
 }
 
 # Ambil data lama dari database
-$stmt = mysqli_prepare($conn, "SELECT * FROM tbl_mahasiswa WHERE cmid = ? LIMIT 1");
+$stmt = mysqli_prepare($conn, "SELECT * FROM tbl_pengunjung WHERE cmid = ? LIMIT 1");
 if (!$stmt) {
     $_SESSION['flash_error_mhs'] = 'Query tidak benar.';
-    redirect_ke('read_mahasiswa.php');
+    redirect_ke('read_pengunjung.php');
 }
 
 mysqli_stmt_bind_param($stmt, "i", $cmid);
@@ -27,8 +27,8 @@ $row = mysqli_fetch_assoc($res);
 mysqli_stmt_close($stmt);
 
 if (!$row) {
-    $_SESSION['flash_error_mhs'] = 'Data mahasiswa tidak ditemukan.';
-    redirect_ke('read_mahasiswa.php');
+    $_SESSION['flash_error_mhs'] = 'Data Pengunjung tidak ditemukan.';
+    redirect_ke('read_pengunjung.php');
 }
 
 # Nilai awal (prefill form)
@@ -66,16 +66,16 @@ if (!empty($old)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Biodata Mahasiswa</title>
+    <title>Edit Biodata Pengunjung</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Edit Biodata Mahasiswa</h1>
+        <h1>Edit Biodata Pengunjung</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Beranda</a></li>
-                <li><a href="read_mahasiswa.php">Data Mahasiswa</a></li>
+                <li><a href="read_pengunjung.php">Data Pengunjung</a></li>
                 <li><a href="edit">Edit Biodata</a></li>
             </ul>
         </nav>
@@ -83,7 +83,7 @@ if (!empty($old)) {
 
     <main>
         <section id="biodata" style="max-width: 800px; margin: 20px auto;">
-            <h2>Edit Biodata Sederhana Mahasiswa</h2>
+            <h2>Edit Biodata Sederhana pengunjung</h2>
             
             <?php if (!empty($flash_error)): ?>
                 <div style="padding:10px; margin-bottom:10px; 
@@ -92,7 +92,7 @@ if (!empty($old)) {
                 </div>
             <?php endif; ?>
             
-            <form action="update_mahasiswa.php" method="POST">
+            <form action="update_pengunjung.php" method="POST">
                 <input type="hidden" name="cmid" value="<?= (int)$cmid; ?>">
                 
                 <label for="txtNimEdit"><span>NIM:</span>
@@ -156,7 +156,7 @@ if (!empty($old)) {
 
                 <button type="submit">Kirim Perubahan</button>
                 <button type="reset">Batal</button>
-                <a href="read_mahasiswa.php" style="background-color: #b4b4b4; color: #272727; 
+                <a href="read_pengunjung.php" style="background-color: #b4b4b4; color: #272727; 
                    padding: 10px 20px; border-radius: 6px; text-decoration: none; 
                    display: inline-block; margin-left: 10px;">
                     Kembali

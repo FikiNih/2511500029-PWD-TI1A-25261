@@ -9,28 +9,28 @@ $cmid = filter_input(INPUT_GET, 'cmid', FILTER_VALIDATE_INT, [
 ]);
 
 if (!$cmid) {
-    $_SESSION['flash_error_mhs'] = 'ID Mahasiswa tidak valid.';
-    redirect_ke('read_mahasiswa.php');
+    $_SESSION['flash_error_mhs'] = 'ID Pengunjung tidak valid.';
+    redirect_ke('read_pengunjung.php');
 }
 
 # Hapus data dari database menggunakan prepared statement
-$stmt = mysqli_prepare($conn, "DELETE FROM tbl_mahasiswa WHERE cmid = ?");
+$stmt = mysqli_prepare($conn, "DELETE FROM tbl_pengunjung WHERE cmid = ?");
 
 if (!$stmt) {
     $_SESSION['flash_error_mhs'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('read_mahasiswa.php');
+    redirect_ke('read_pengunjung.php');
 }
 
 mysqli_stmt_bind_param($stmt, "i", $cmid);
 
 if (mysqli_stmt_execute($stmt)) {
-    $_SESSION['flash_sukses_mhs'] = 'Data mahasiswa berhasil dihapus!';
+    $_SESSION['flash_sukses_mhs'] = 'Data pengunjung berhasil dihapus!';
 } else {
     $_SESSION['flash_error_mhs'] = 'Data gagal dihapus. Silakan coba lagi.';
 }
 
 mysqli_stmt_close($stmt);
 
-# Konsep PRG: Redirect ke halaman data mahasiswa
-redirect_ke('read_mahasiswa.php');
+# Konsep PRG: Redirect ke halaman data pengunjung setelah proses delete
+redirect_ke('read_pengunjung.php');
 ?>

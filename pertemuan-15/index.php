@@ -39,8 +39,8 @@ require_once __DIR__ . '/fungsi.php';
     </section>
 
     <section id="biodata">
-      <h2>Biodata Sederhana Mahasiswa</h2>
-      <form action="proses_mahasiswa.php" method="POST">
+      <h2>Biodata Sederhana pengunjung</h2>
+      <form action="proses_pengunjung.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan NIM" required>

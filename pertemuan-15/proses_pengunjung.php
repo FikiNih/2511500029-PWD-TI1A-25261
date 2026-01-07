@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('index.php#biodata');
 }
 
-# Ambil dan bersihkan nilai dari form biodata mahasiswa
+# Ambil dan bersihkan nilai dari form biodata pengunjung
 $nim = bersihkan($_POST['txtNim'] ?? '');
 $nama = bersihkan($_POST['txtNmLengkap'] ?? '');
 $tempat_lahir = bersihkan($_POST['txtT4Lhr'] ?? '');
@@ -68,7 +68,7 @@ if (empty($nama_ortu)) {
 
 # Cek duplikasi NIM
 if (empty($errors)) {
-    $check_nim = "SELECT cmid FROM tbl_mahasiswa WHERE cnim = ?";
+    $check_nim = "SELECT cmid FROM tbl_pengunjung WHERE cnim = ?";
     $stmt_check = mysqli_prepare($conn, $check_nim);
     mysqli_stmt_bind_param($stmt_check, "s", $nim);
     mysqli_stmt_execute($stmt_check);
@@ -114,7 +114,7 @@ $_SESSION['biodata'] = [
 ];
 
 # Insert data ke database menggunakan prepared statement
-$sql = "INSERT INTO tbl_mahasiswa (cnim, cnama, ctempat_lahir, ctanggal_lahir, 
+$sql = "INSERT INTO tbl_pengunjung (cnim, cnama, ctempat_lahir, ctanggal_lahir, 
         chobi, cpasangan, cpekerjaan, cnama_ortu, cnama_kakak, cnama_adik) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
@@ -133,7 +133,7 @@ mysqli_stmt_bind_param($stmt, "ssssssssss",
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old_biodata']);
-    $_SESSION['flash_sukses'] = 'Data biodata mahasiswa berhasil disimpan!';
+    $_SESSION['flash_sukses'] = 'Data biodata pengunjung berhasil disimpan!';
 } else {
     $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
     $_SESSION['old_biodata'] = [

@@ -6,7 +6,7 @@ require_once __DIR__ . '/fungsi.php';
 # Cek method form, hanya izinkan POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_error_mhs'] = 'Akses tidak valid.';
-    redirect_ke('read_mahasiswa.php');
+    redirect_ke('read_pengunjung.php');
 }
 
 # Validasi cmid dari POST
@@ -15,8 +15,8 @@ $cmid = filter_input(INPUT_POST, 'cmid', FILTER_VALIDATE_INT, [
 ]);
 
 if (!$cmid) {
-    $_SESSION['flash_error_edit'] = 'ID Mahasiswa tidak valid.';
-    redirect_ke('edit_mahasiswa.php?cmid=' . (int)$_POST['cmid']);
+    $_SESSION['flash_error_edit'] = 'ID pengunjung tidak valid.';
+    redirect_ke('edit_pengunjung.php?cmid=' . (int)$_POST['cmid']);
 }
 
 # Ambil dan bersihkan nilai dari form
@@ -78,11 +78,11 @@ if (!empty($errors)) {
     ];
     
     $_SESSION['flash_error_edit'] = implode('<br>', $errors);
-    redirect_ke('edit_mahasiswa.php?cmid=' . $cmid);
+    redirect_ke('edit_pengunjung.php?cmid=' . $cmid);
 }
 
 # Update data di database menggunakan prepared statement
-$sql = "UPDATE tbl_mahasiswa SET 
+$sql = "UPDATE tbl_pengunjung SET 
         cnama = ?, 
         ctempat_lahir = ?, 
         ctanggal_lahir = ?, 
@@ -98,7 +98,7 @@ $stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
     $_SESSION['flash_error_edit'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit_mahasiswa.php?cmid=' . $cmid);
+    redirect_ke('edit_pengunjung.php?cmid=' . $cmid);
 }
 
 # Bind parameter dan eksekusi
@@ -109,7 +109,7 @@ mysqli_stmt_bind_param($stmt, "sssssssssi",
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old_edit']);
-    $_SESSION['flash_sukses_mhs'] = 'Data mahasiswa berhasil diperbarui!';
+    $_SESSION['flash_sukses_mhs'] = 'Data pengunjung berhasil diperbarui!';
     
     # Update session biodata jika data yang diupdate adalah data yang sedang ditampilkan
     if (isset($_SESSION['biodata']) && $_SESSION['biodata']['nim'] == $nim) {
@@ -127,8 +127,8 @@ if (mysqli_stmt_execute($stmt)) {
         ];
     }
     
-    # Konsep PRG: Redirect ke halaman data mahasiswa
-    redirect_ke('read_mahasiswa.php');
+    # Konsep PRG: Redirect ke halaman data pengunjung
+    redirect_ke('read_pengunjung.php');
 } else {
     $_SESSION['old_edit'] = [
         'nama' => $nama,
@@ -143,7 +143,7 @@ if (mysqli_stmt_execute($stmt)) {
     ];
     
     $_SESSION['flash_error_edit'] = 'Data gagal diperbarui. Silakan coba lagi.';
-    redirect_ke('edit_mahasiswa.php?cmid=' . $cmid);
+    redirect_ke('edit_pengunjung.php?cmid=' . $cmid);
 }
 
 mysqli_stmt_close($stmt);
