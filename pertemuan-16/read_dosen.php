@@ -143,7 +143,7 @@ unset($_SESSION['flash_sukses_dosen'], $_SESSION['flash_error_dosen']);
                     <?php while ($row = mysqli_fetch_assoc($q)): ?>
                         <tr>
                             <td><?= htmlspecialchars($row['ckode']); ?></td>
-                            <td><?= htmlspecialchars($row['cdosen']); ?></td>
+                            <td><?= htmlspecialchars($row['cnama']); ?></td>
                             <td><?= htmlspecialchars($row['calamat']); ?></td>
                             <td><?= date('d-m-Y', strtotime($row['ctjdosen'])); ?></td>
                             <td><?= htmlspecialchars($row['cjja']); ?></td>
