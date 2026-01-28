@@ -12,5 +12,6 @@ UAS PADA HARI INI, 28 JANUARI 2026 SAYA MENGERJAKAN
 <li>mengubah kode proses</li>
 <li>menghapus kode ada kesalahan</li>
 <li>membuat ulang table</li>
+<li>mengganti kode</li>
 
 </ol>
