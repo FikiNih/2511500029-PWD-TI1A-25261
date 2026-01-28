@@ -16,4 +16,5 @@ UAS PADA HARI INI, 28 JANUARI 2026 SAYA MENGERJAKAN
 <li>melihat hasil</li>
 <li>memperbaiki kesalahan table</li>
 <li>menambahkan column baru</li>
+<li>membuat file baru</li>
 </ol>
