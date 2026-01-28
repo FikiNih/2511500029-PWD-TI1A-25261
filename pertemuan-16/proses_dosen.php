@@ -137,16 +137,16 @@ if (mysqli_stmt_execute($stmt)) {
 } else {
     $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
     $_SESSION['old_biodata'] = [
-        'kode' => $kddosen,
+        'kodedos' => $kddosen,
         'nama' => $namadosen,
         'alamat' => $alamat,
-        'tanggal_jadi' => $tanggal_jadi,
+        'tanggal' => $tanggal_jadi,
         'jja' => $jja,
-        'home' => $home,
-        'nomor' => $nomor,
+        'prodi' => $home,
+        'nohp' => $nomor,
         'pasangan' => $pasangan,
         'anak' => $anak,
-        'bidang' => $bidang
+        'ilmu' => $bidang
     ];
 }
 

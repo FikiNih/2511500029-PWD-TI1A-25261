@@ -9,6 +9,7 @@ UAS PADA HARI INI, 28 JANUARI 2026 SAYA MENGERJAKAN
 <li>menambahkan file read_dosen</li>
 <li>menambahkan file proses dosen</li>
 <li>mengubah kode</li>
+<li>mengubah kode proses</li>
 
 
 </ol>

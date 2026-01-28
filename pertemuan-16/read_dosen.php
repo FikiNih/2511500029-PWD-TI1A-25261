@@ -142,15 +142,6 @@ unset($_SESSION['flash_sukses_dosen'], $_SESSION['flash_error_dosen']);
                     <?php $i = 1; ?>
                     <?php while ($row = mysqli_fetch_assoc($q)): ?>
                         <tr>
-                            <td><?= $i++; ?></td>
-                            <td class="aksi-btn">
-                                <a href="edit_pengunjung.php?cmid=<?= (int)$row['cmid']; ?>" class="btn-edit">Edit</a>
-                                <a href="pengunjung.php?cmid=<?= (int)$row['cmid']; ?>" 
-                                   class="btn-hapus" 
-                                   onclick="return confirm('Hapus data <?= htmlspecialchars($row['cnama']); ?> (NIM: <?= htmlspecialchars($row['cnim']); ?>)?')">
-                                    Hapus
-                                </a>
-                            </td>
                             <td><?= htmlspecialchars($row['ckode']); ?></td>
                             <td><?= htmlspecialchars($row['cdosen']); ?></td>
                             <td><?= htmlspecialchars($row['calamat']); ?></td>
