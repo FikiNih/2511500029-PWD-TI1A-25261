@@ -19,4 +19,5 @@ UAS PADA HARI INI, 28 JANUARI 2026 SAYA MENGERJAKAN
 <li>membuat file baru</li>
 <li>mengganti kode :(<li>
 <li>mencari kesalahan kode</li>
+<li>export file sql</li>
 </ol>
